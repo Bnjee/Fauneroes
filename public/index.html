@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body id="body-fauneroes">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
         <div class="container-fluid">
             <div class="navbar-brand"></div>
@@ -33,26 +33,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav navbar-nav-scroll ms-auto">
-                    <div class="nav-link active"><a class="nav-link-text" aria-current="page" href="#">Home</a>
-                    </div>
-                    <div class="nav-link active"><a class="nav-link-text" href="#about">About</a></div>
-                    <div class="nav-link active"><a class="nav-link-text" href="#">Features</a></div>
-                    <div class="nav-link active"><a class="nav-link-text" href="#">Media</a></div>
-                    <div class="nav-link active"><a class="nav-link-text" href="#">FAQ</a></div>
-                    <div class="nav-link active"><a class="nav-link-text" href="#">Join</a></div>
-                    <div class="nav-link active"><a href="#">
+                    <div class="nav-link active"><a class="nav-link-text" data-target="#body-fauneroes">Home</a></div>
+                    <div class="nav-link active"><a class="nav-link-text" data-target="#about" >About</a></div>
+                    <div class="nav-link active"><a class="nav-link-text" data-target="#features">Features</a></div>
+                    <div class="nav-link active"><a class="nav-link-text" data-target="#media">Media</a></div>
+                    <div class="nav-link active"><a class="nav-link-text" data-target="#faq">FAQ</a></div>
+                    <div class="nav-link active"><a class="nav-link-text" data-target="#">Join</a></div>
+                    <div class="nav-link active"><a data-target="#">
                             <i class="bi bi-twitter-x"></i>
                         </a>
                     </div>
-                    <div class="nav-link active"><a href="#">
+                    <div class="nav-link active"><a data-target="#">
                             <i class="bi bi-tiktok"></i>
                         </a>
                     </div>
-                    <div class="nav-link active"><a href="#">
+                    <div class="nav-link active"><a data-target="#">
                             <i class="bi bi-instagram"></i>
                         </a>
                     </div>
-                    <div class="nav-link active"><a href="#">
+                    <div class="nav-link active"><a data-target="#">
                             <i class="bi bi-discord"></i>
                         </a>
                     </div>
@@ -61,7 +60,34 @@
         </div>
     </nav>
 
-    <div class="container-fluid parallax-container"></div>
+    <div class="container-fluid parallax-container" id="parallax-on">
+      <div class="row">
+        <div class="col layer-1 header-image">
+            <img src="img/Squirrel_Artwork_Layer_0.webp" alt="Layer 1" class="img-fluid">
+        </div>
+        <div class="col layer-2">
+            <img src="img/Squirrel_Artwork_Layer_1.webp" alt="Layer 2" class="img-fluid">
+        </div>
+        <div class="col layer-3">
+            <img src="img/Squirrel_Artwork_Layer_2.webp" alt="Layer 3" class="img-fluid">
+        </div>
+        <div class="col layer-4">
+            <img src="img/Squirrel_Artwork_Layer_3.webp" alt="Layer 4" class="img-fluid">
+        </div>
+        <div class="col layer-5">
+            <img src="img/Squirrel_Artwork_Layer_LogoSmall.webp" alt="Layer 5" class="img-fluid">
+            </picture>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid parallax-container" id="parallax-off">
+      <div class="row">
+        <div class="col header-image">
+            <img src="img/Squirrel_Artwork_WithLargeLogo.webp" alt="Header image" class="img-fluid">
+        </div>
+        </div>
+    </div>
 
     <div class="container-fluid text-center background-color-body">
         <div class="row" id="about">
@@ -69,7 +95,7 @@
                 <div class="container my-5">
                     <div class="row">
                       <div class="col-md-6 offset-md-3">
-                        <h2 id="game-title" class="bold">___ ____</h2>
+                        <h2 id="game-title" class="bold"></h2>
                       </div>
                     </div>
                     <div class="row">
@@ -85,55 +111,91 @@
                   </div>
             
                   <div class="container my-5">
-                    <div class="row">
+                    <div class="row" id="features">
                       <div class="col-md-6 offset-md-3">
-                        <h2 id="game-title" class="bold">___ ____</h2>
+                        <h2 id="game-features" class="bold"></h2>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-12 py-3 background-black text-start fs-4" id="description-fauneroes">
-                        &nbsp;&nbsp;&nbsp;&nbsp;Fauneroes is <span class="bold">Tactical-RPG Indie Game</span> taking place in a 
-                        fantasy forest world populated with cute animals.
-                        Explore the world with endless charming stories, 
-                        recruit new allies, and overcome tactical challenges.<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;The game is currently in development for PC, aiming 
-                        at starting a <span class="bold">kickstarter campaign in summer 2024.</span>
+                      <div class="col-lg-2 img-features" id="squirrel-features">
+                        <img src="img/squirrel.webp" alt="Layer 4" class="img-fluid">
+                      </div>
+                      <div class="col-12 col-lg-8 py-3 background-black text-start fs-4" id="features-fauneroes">
+                        <ul>
+                          <li>Feature #1 long text to fill long text to fill long text to fill long text to fill long text to fill long text to fill</li>
+                          <li>Feature #2 long text to fill long text to fill long text to fill</li>
+                          <li>Feature #3 long text to fill long text to fill</li>
+                          <li>Feature #4 long text to fill long text to fill long text to fill long text to fill</li>
+                          <li>Feature #5 long text to fill</li>
+                          <li>Feature #6 long text to fill long text to fill</li>
+                          <li>Feature #7 long text to fill long text to fill long text to fill</li>
+                          <li>Feature #8 long text to fill</li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-2 img-features" id="bear-features">
+                        <img src="img/bear.webp" alt="Layer 4" class="img-fluid">
                       </div>
                     </div>
                   </div>
             
                   <div class="container my-5">
-                    <div class="row">
-                      <div class="col-md-6 offset-md-3">
-                        <h2 id="game-title" class="bold">___ ____</h2>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 py-3 background-black text-start fs-4" id="description-fauneroes">
-                        &nbsp;&nbsp;&nbsp;&nbsp;Fauneroes is <span class="bold">Tactical-RPG Indie Game</span> taking place in a 
-                        fantasy forest world populated with cute animals.
-                        Explore the world with endless charming stories, 
-                        recruit new allies, and overcome tactical challenges.<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;The game is currently in development for PC, aiming 
-                        at starting a <span class="bold">kickstarter campaign in summer 2024.</span>
+                    <div class="row" id="media">
+                      <div id="carouselExampleFade" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="img/bear.webp" class="img-fluid" alt="bear">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="3000">
+                            <img src="img/squirrel.webp" class="img-fluid" alt="squirrel">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="3000">
+                            <img src="img/chicken.webp" class="img-fluid" alt="chicken">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
                       </div>
                     </div>
                   </div>
             
                   <div class="container my-5">
-                    <div class="row">
+                    <div class="row" id="faq">
                       <div class="col-md-6 offset-md-3">
-                        <h2 id="game-title" class="bold">___ ____</h2>
+                        <h2 id="game-faq" class="bold"></h2>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-12 py-3 background-black text-start fs-4" id="description-fauneroes">
-                        &nbsp;&nbsp;&nbsp;&nbsp;Fauneroes is <span class="bold">Tactical-RPG Indie Game</span> taking place in a 
-                        fantasy forest world populated with cute animals.
-                        Explore the world with endless charming stories, 
-                        recruit new allies, and overcome tactical challenges.<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;The game is currently in development for PC, aiming 
-                        at starting a <span class="bold">kickstarter campaign in summer 2024.</span>
+                      <div class="col-12 py-3 background-black text-start fs-4" id="faq-fauneroes">
+                        <h3 class="bold">What is Fauneroes?</h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp;It's a Tactical-RPG indie game with cute knight animals. 
+                        It will feature community made content, in an attempt to build a large and diverse world.
+                        <br><br>
+                        <h3 class="bold">How can I play it?</h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp;The game is still under development. We are aiming at a Kickstarter campaign in summer 2024, 
+                        for a release probably early 2025.
+                        <br><br>
+                        <h3 class="bold">Will the game have multiplayer?</h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Yes, multiplayer is planned for co-op. 
+                        Number of players is tbd, but it will probably be 2 or 3.
+                        <br><br>
+                        <h3 class="bold">What are the targeted platforms?</h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp;PC only for the moment.
+                        <br><br>
+                        <h3 class="bold">What shape will take community made content in Fauneroes?</h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp;A complete map editor and cutscene editor is available in game. 
+                        You will be able to create your own stories, and share it with others in game. 
+                        The best maps will be featured in community events, 
+                        or even added permanently to the world map as new locations.
+                        <br><br>
+                        <h3 class="bold">How can I support the game?</h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp;For now, follow us on social media and talk about the game around you! 
+                        We need a large enough following to make the Kickstarter campaign possible.
                       </div>
                     </div>
                   </div>
@@ -147,6 +209,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
 </body>
 
 <footer class="text-center text-white">
