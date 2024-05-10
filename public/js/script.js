@@ -139,15 +139,14 @@ function initTextAnimation(id, newText) {
           gsap.fromTo(
             chars,
             { 
-              y: 50,
+              x: -50,
               opacity: 0
             },
             {
-              y: 0,
+              x: 0,
               opacity: 1,
-              stagger: 0.05,
-              duration: 2,
-              ease: 'power4.out',
+              duration: 1,
+              ease: 'bounce',
             });
         } else {
           title.textContent = "-";
