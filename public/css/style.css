@@ -196,7 +196,3 @@ footer {
       display: none;
     }
 }
-
-a[data-target]:hover {
-    cursor: pointer;
-}
