@@ -163,3 +163,40 @@ footer {
 #copyright {
     color: rgb(206, 206, 206);
 }
+
+#features-fauneroes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.img-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+@media (max-width: 992px) {
+    #squirrel-features, #bear-features {
+      display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    #parallax-on {
+      display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    #parallax-off {
+      display: none;
+    }
+}
+
+a[data-target]:hover {
+    cursor: pointer;
+}

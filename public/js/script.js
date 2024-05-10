@@ -2,7 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   hoverFocus();
   adaptsHeaderImageAccordingToScreenSize();
   window.addEventListener("resize", adaptsHeaderImageAccordingToScreenSize);
-  initTextAnimation();
+  initTextAnimation("#game-title", "The Game");
+  initTextAnimation("#game-features", "Features");
+  initTextAnimation("#game-faq", "FAQ");
+  initImageFeaturesAnimation("#squirrel-features", 1);
+  initImageFeaturesAnimation("#bear-features", 2);
+  initLinks();
 });
 
 /**
@@ -104,68 +109,94 @@ function setFixedImage(className) {
 }
 
 /**
- * Met les images parallax si l'écran fait plus de 992px.
- * Met l'image statique si l'écran fait moins de 992px
+ * Met les images en parallax si l'écran fait plus de 992px.
+ * Met l'image en statique si l'écran fait moins de 992px
  */
 function adaptsHeaderImageAccordingToScreenSize() {
   const screenWidth = window.innerWidth;
-  const parallaxContainer = document.querySelector(".parallax-container");
-  parallaxContainer.innerHTML = "";
   if (screenWidth > 992) {
-    parallaxContainer.innerHTML = `
-                <div class="row">
-                <div class="col layer-1 header-image">
-                    <img src="img/Squirrel_Artwork_Layer_0.webp" alt="Layer 1" class="img-fluid">
-                </div>
-                <div class="col layer-2">
-                    <img src="img/Squirrel_Artwork_Layer_1.webp" alt="Layer 2" class="img-fluid">
-                </div>
-                <div class="col layer-3">
-                    <img src="img/Squirrel_Artwork_Layer_2.webp" alt="Layer 3" class="img-fluid">
-                </div>
-                <div class="col layer-4">
-                    <img src="img/Squirrel_Artwork_Layer_3.webp" alt="Layer 4" class="img-fluid">
-                </div>
-                <div class="col layer-5">
-                    <img src="img/Squirrel_Artwork_Layer_LogoSmall.webp" alt="Layer 5" class="img-fluid">
-                    </picture>
-                </div>
-                </div>
-        `;
     setParallaxImages();
     setFixedImage(".layer-1");
-  } else {
-    parallaxContainer.innerHTML = `
-                <div class="row">
-                <div class="col header-image">
-                    <img src="img/Squirrel_Artwork_WithLargeLogo.webp" alt="Header image" class="img-fluid">
-                </div>
-                </div>
-        `;
   }
 }
 
 /**
- * Anime le texte "The Game" dès qu'il est visible à l'écran
+ * Anime un texte dès qu'il est visible à l'écran
+ * @param {string} id 
+ * @param {string} newText
  */
-function initTextAnimation() {
-  const gameTitle = document.querySelector("#game-title");
+function initTextAnimation(id, newText) {
+  const title = document.querySelector(id);
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && gameTitle) {
-          gsap.to(gameTitle, {
-            duration: 1,
-            text: "The Game",
-            ease: "none",
-          });
+        if (entry.isIntersecting && title) {
+          title.textContent = newText;
+          const text = new SplitType(id, { types: 'chars' })
+          const chars = text.chars
+          gsap.fromTo(
+            chars,
+            { 
+              y: 50,
+              opacity: 0
+            },
+            {
+              y: 0,
+              opacity: 1,
+              stagger: 0.05,
+              duration: 2,
+              ease: 'power4.out',
+            });
+        } else {
+          title.textContent = "-";
         }
       });
     },
     { threshold: 0.5 }
   );
-  if (gameTitle) {
-    observer.observe(gameTitle);
+  if (title) {
+    observer.observe(title);
   }
+}
+
+/**
+ * Permet de faire un effet de fondu sur les images du bloc features
+ * @param {string} id 
+ * @param {number} duration
+ */
+function initImageFeaturesAnimation(id, duration) {
+  const title = document.querySelector(id);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && title) {
+          gsap.fromTo(id, { x: -100, opacity: 0 }, { duration: duration, x: 0, opacity: 1 });
+        } else {
+          gsap.fromTo(id, { x: -100, opacity: 0 }, { duration: duration, x: -100, opacity: 0 });
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  if (title) {
+    observer.observe(title);
+  }
+}
+
+/**
+ * Initialise la façon de faire lors du click sur les liens de la navbar
+ */
+function initLinks() {
+  var scrollLinks = document.querySelectorAll('.nav-link-text[data-target]');
+  scrollLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      var target = document.querySelector(link.getAttribute('data-target'));
+      target.scrollIntoView({
+        behavior: "instant"
+      });
+    });
+  });
 }
