@@ -161,7 +161,7 @@ function initTextAnimation(id, newText) {
 }
 
 /**
- * Permet de faire un effet de fondu sur les images du bloc features
+ * Permet de faire un effet d'apparition de gauche à droite et de fondu sur les images du bloc features
  * @param {string} id 
  * @param {number} duration
  */
@@ -174,7 +174,7 @@ function initImageFeaturesAnimation(id, duration) {
         if (entry.isIntersecting && title) {
           gsap.fromTo(id, { x: -100, opacity: 0 }, { duration: duration, x: 0, opacity: 1 });
         } else {
-          gsap.fromTo(id, { x: -100, opacity: 0 }, { duration: duration, x: -100, opacity: 0 });
+          gsap.fromTo(id, { x: 0, opacity: 1 }, { duration: duration, x: -100, opacity: 0 });
         }
       });
     },
