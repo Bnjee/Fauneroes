@@ -115,19 +115,19 @@ function adaptsHeaderImageAccordingToScreenSize() {
     parallaxContainer.innerHTML = `
                 <div class="row">
                 <div class="col layer-1 header-image">
-                    <img src="img/Squirrel_Artwork_Layer_0.webp" alt="Layer 1" class="img-fluid">
+                    <img src="../img/Squirrel_Artwork_Layer_0.webp" alt="Layer 1" class="img-fluid">
                 </div>
                 <div class="col layer-2">
-                    <img src="img/Squirrel_Artwork_Layer_1.webp" alt="Layer 2" class="img-fluid">
+                    <img src="../img/Squirrel_Artwork_Layer_1.webp" alt="Layer 2" class="img-fluid">
                 </div>
                 <div class="col layer-3">
-                    <img src="img/Squirrel_Artwork_Layer_2.webp" alt="Layer 3" class="img-fluid">
+                    <img src="../img/Squirrel_Artwork_Layer_2.webp" alt="Layer 3" class="img-fluid">
                 </div>
                 <div class="col layer-4">
-                    <img src="img/Squirrel_Artwork_Layer_3.webp" alt="Layer 4" class="img-fluid">
+                    <img src="../img/Squirrel_Artwork_Layer_3.webp" alt="Layer 4" class="img-fluid">
                 </div>
                 <div class="col layer-5">
-                    <img src="img/Squirrel_Artwork_Layer_LogoSmall.webp" alt="Layer 5" class="img-fluid">
+                    <img src="../img/Squirrel_Artwork_Layer_LogoSmall.webp" alt="Layer 5" class="img-fluid">
                     </picture>
                 </div>
                 </div>
@@ -138,7 +138,7 @@ function adaptsHeaderImageAccordingToScreenSize() {
     parallaxContainer.innerHTML = `
                 <div class="row">
                 <div class="col header-image">
-                    <img src="img/Squirrel_Artwork_WithLargeLogo.webp" alt="Header image" class="img-fluid">
+                    <img src="../img/Squirrel_Artwork_WithLargeLogo.webp" alt="Header image" class="img-fluid">
                 </div>
                 </div>
         `;
