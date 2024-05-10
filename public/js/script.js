@@ -132,6 +132,7 @@ function initTextAnimation(id, newText) {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && title) {
+          title.style.visibility = 'visible';
           title.textContent = newText;
           const text = new SplitType(id, { types: 'chars' })
           const chars = text.chars
@@ -150,6 +151,7 @@ function initTextAnimation(id, newText) {
             });
         } else {
           title.textContent = "-";
+          title.style.visibility = 'hidden';
         }
       });
     },
