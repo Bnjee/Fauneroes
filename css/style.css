@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'signika-bold';
+    src: url('../fonts/Signika-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'signika-light';
+    src: url('../fonts/Signika-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'signika-semi-blold';
+    src: url('../fonts/Signika-SemiBold.ttf') format('truetype');
+}
+
+body {
+    font-family: 'signika-light', sans-serif;
+    background-color: #D9C8B4;
+    color: #401A0C;
+}
+
+.bi {
+    color: rgb(245, 190, 66);
+}
+
+.bi-hover {
+    color: rgba(245, 191, 66, 0.7) !important;
+}
+
+.parallax-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.layer-2, .layer-3, .layer-4, .layer-5 {
+    position: absolute; 
+    top: 0px; 
+    left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.layer-1 {
+    z-index: -1;
+}
+
+.header-image {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.logo-large {
+    width: 400px;
+    height: auto;
+}
+
+.logo-small {
+    width: 300px;
+    height: auto;
+}
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 992px) {
+    .logo-large {
+        width: 300px;
+        height: auto;
+    }
+    
+    .logo-small {
+        width: 250px;
+        height: auto;
+    }
+}
+
+/* Pour les écrans de taille petit */
+@media (max-width: 500px) {
+    .logo-large {
+        width: 200px;
+        height: auto;
+    }
+    
+    .logo-small {
+        width: 170px;
+        height: auto;
+    }
+}
+
+img.logo {
+    transition: all 0.5s ease; 
+}
+
+.nav-link {
+    font-size: 1.25rem;
+}
+
+.active-hover {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        text-align: right;
+    }
+    .nav-link {
+        max-width: 95%;
+    }
+}
+
+h1 span, h1 b{
+    color:rgb(169, 121, 10);
+}
+
+h1 {
+    color: black;
+    font-family: 'signika-bold', sans-serif;
+}
+
+.blink {
+    visibility: hidden;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        backdrop-filter: blur(1px);
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-toggler {
+        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+}
+
+a {
+    font-family: 'signika-bold', sans-serif;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.bold {
+    font-family: 'signika-bold', sans-serif;
+}
+
+.background-color-body {
+    background-color: #D9C8B4;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#copyright {
+    color: rgb(206, 206, 206);
+}
