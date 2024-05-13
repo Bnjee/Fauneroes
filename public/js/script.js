@@ -1,3 +1,5 @@
+document.getElementById('inputEmail').addEventListener('input', updateButtonState);
+
 document.addEventListener("DOMContentLoaded", () => {
   hoverFocus();
   adaptsHeaderImageAccordingToScreenSize();
@@ -5,9 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initTextAnimation("#game-title", "The Game");
   initTextAnimation("#game-features", "Features");
   initTextAnimation("#game-faq", "FAQ");
+  initTextAnimation("#game-join", "Join our mailing list!");
   initImageFeaturesAnimation("#squirrel-features", 1);
   initImageFeaturesAnimation("#bear-features", 2);
   initLinks();
+  updateButtonState();
 });
 
 /**
@@ -139,14 +143,14 @@ function initTextAnimation(id, newText) {
           gsap.fromTo(
             chars,
             { 
-              x: -50,
+              x: -25,
               opacity: 0
             },
             {
               x: 0,
               opacity: 1,
-              duration: 1,
-              ease: 'bounce',
+              duration: 0.5,
+              ease: 'power3.out',
             });
         } else {
           title.textContent = "-";
@@ -200,4 +204,10 @@ function initLinks() {
       });
     });
   });
+}
+
+function updateButtonState() {
+  const input = document.getElementById('inputEmail');
+  const button = document.getElementById('buttonEmail');
+  button.disabled = !input.value.trim();
 }

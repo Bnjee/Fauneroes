@@ -196,3 +196,14 @@ footer {
       display: none;
     }
 }
+
+#subscribeDone {
+    display: none;
+    border: 2px solid #401A0C;
+    padding: 10px;
+    margin: 10px;
+}
+
+.bi-chat-heart-fill {
+    color: #401A0C;
+}

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Fauneroes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="img/x-icon" href="img/Logo_Fauneroes_Mini.webp">
+    <link rel="icon" href="img/Logo_Fauneroes_Mini.webp" sizes="48x48">
     <meta name="title" content="Fauneroes" />
     <meta name="description"
         content="Fauneroes is Tactical-RPG Indie Game taking place in a fantasy forest world populated with cute animals" />
@@ -38,7 +38,7 @@
                     <div class="nav-link active"><a class="nav-link-text" href="#features" data-target="#features">Features</a></div>
                     <div class="nav-link active"><a class="nav-link-text" href="#media" data-target="#media">Media</a></div>
                     <div class="nav-link active"><a class="nav-link-text" href="#faq" data-target="#faq">FAQ</a></div>
-                    <div class="nav-link active"><a class="nav-link-text" href="#body-fauneroes">Join</a></div>
+                    <div class="nav-link active"><a class="nav-link-text" href="#join" data-target="#join">Join</a></div>
                     <div class="nav-link active"><a href="https://twitter.com/fauneroes" target="_blank">
                             <i class="bi bi-twitter-x"></i>
                         </a>
@@ -199,17 +199,44 @@
                       </div>
                     </div>
                   </div>
+                  <hr id="join">
+                  <div class="container my-5">
+                    <div class="row">
+                      <div class="col-md-6 offset-md-3">
+                        <h2 id="game-join" class="bold"></h2>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 offset-md-3">
+                        <form id="formEmail">
+                          <div class="mb-3">
+                            <label for="inputEmail" class="form-label"><h3>fauneroes@gmail.com</h3></label>
+                            <div class="input-group input-group-lg" id="inputGroupEmail">
+                              <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                              <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
+                            </div>
+                            <div id="subscribeDone">
+                              <h4>Thanks for Subscribing! <i class="bi bi-chat-heart-fill"></i></h4>
+                              <h4>We'll send news to your inbox.</h4>
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-warning btn-lg" id="buttonEmail">Subscribe Now</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
 
 
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
+    <script type="module" src="js/firebaseSetup.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 <footer class="text-center text-white">
@@ -230,8 +257,10 @@
       </section>
       <section id="copyright">
         © 2024
-        <img src="img/Logo_YorshInGame.webp" 
+        <a href="https://antoinecollot.github.io/" target="_blank">
+          <img src="img/Logo_YorshInGame.webp" 
             width="100" height="15" priority alt="Logo Yorsh" class="logoYorsh">
+        </a>
         All rights reserved
       </section>
     </div>
