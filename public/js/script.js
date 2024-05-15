@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTextAnimation("#game-title", "The Game");
   initTextAnimation("#game-features", "Features");
   initTextAnimation("#game-faq", "FAQ");
-  initTextAnimation("#game-join", "Join our mailing list!");
+  initTextAnimation("#game-join", "Join our mailing list to be notified when the game is out!");
   initImageFeaturesAnimation("#squirrel-features", 1);
   initImageFeaturesAnimation("#bear-features", 2);
   initLinks();
@@ -206,6 +206,9 @@ function initLinks() {
   });
 }
 
+/**
+ * Permet de griser ou dégriser le bouton d'envoi de l'email
+ */
 function updateButtonState() {
   const input = document.getElementById('inputEmail');
   const button = document.getElementById('buttonEmail');
