@@ -185,7 +185,7 @@ footer {
 }
 
 @media (max-width: 992px) {
-    #squirrel-features, #bear-features {
+    #snail-features {
       display: none;
     }
 }
