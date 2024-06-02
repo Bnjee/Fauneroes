@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTextAnimation("#game-features", "Features");
   initTextAnimation("#game-faq", "FAQ");
   initTextAnimation("#game-join", "Join our mailing list to be notified when the game is out!");
-  initImageFeaturesAnimation("#snail-features", 5);
+  initImageFeaturesAnimation("#snail-features", 4);
   initLinks();
   updateButtonState();
 });
@@ -176,7 +176,9 @@ function initImageFeaturesAnimation(id, duration) {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && title) {
-          gsap.fromTo(id, { x: -1000, opacity: 0 }, { duration: duration, x: 0, opacity: 1 });
+          gsap.fromTo(id, { x: -750, opacity: 0 }, { duration: duration, x: 0, opacity: 1 });
+        } else {
+          gsap.fromTo(id, { x: 0, opacity: 0 }, { duration: duration, x: -750, opacity: 0 });
         }
       });
     },
