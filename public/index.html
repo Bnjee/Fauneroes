@@ -63,20 +63,19 @@
     <div class="container-fluid parallax-container" id="parallax-on">
       <div class="row">
         <div class="col layer-1 header-image">
-            <img src="img/Squirrel_Artwork_Layer_0.webp" alt="Layer 1" class="img-fluid">
+            <img src="img/Squirrel_Artwork_Layer_0.webp" alt="Layer 1" class="img-fluid" loading="lazy">
         </div>
         <div class="col layer-2">
-            <img src="img/Squirrel_Artwork_Layer_1.webp" alt="Layer 2" class="img-fluid">
+            <img src="img/Squirrel_Artwork_Layer_1.webp" alt="Layer 2" class="img-fluid" loading="lazy">
         </div>
         <div class="col layer-3">
-            <img src="img/Squirrel_Artwork_Layer_2.webp" alt="Layer 3" class="img-fluid">
+            <img src="img/Squirrel_Artwork_Layer_2.webp" alt="Layer 3" class="img-fluid" loading="lazy">
         </div>
         <div class="col layer-4">
-            <img src="img/Squirrel_Artwork_Layer_3.webp" alt="Layer 4" class="img-fluid">
+            <img src="img/Squirrel_Artwork_Layer_3.webp" alt="Layer 4" class="img-fluid" loading="lazy">
         </div>
         <div class="col layer-5">
-            <img src="img/Squirrel_Artwork_Layer_LogoSmall.webp" alt="Layer 5" class="img-fluid">
-            </picture>
+            <img src="img/Squirrel_Artwork_Layer_LogoSmall.webp" alt="Layer 5" class="img-fluid" loading="lazy">
         </div>
       </div>
     </div>
@@ -84,9 +83,9 @@
     <div class="container-fluid parallax-container" id="parallax-off">
       <div class="row">
         <div class="col header-image">
-            <img src="img/Squirrel_Artwork_WithLargeLogo.webp" alt="Header image" class="img-fluid">
+          <img src="img/Squirrel_Artwork_WithLargeLogo.webp" alt="Header image" class="img-fluid" loading="lazy">
         </div>
-        </div>
+      </div>
     </div>
 
     <div class="container-fluid text-center background-color-body">
@@ -141,22 +140,22 @@
                       <div id="carouselExampleFade" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
                         <div class="carousel-inner">
                           <div class="carousel-item active" data-bs-interval="3000">
-                            <img src="img/Screenshot_IG.webp" class="img-fluid" alt="in game">
+                            <img id="Screenshot_IG" class="img-fluid" alt="in game" loading="lazy">
                           </div>
                           <div class="carousel-item" data-bs-interval="3000">
-                            <img src="img/Screenshot_IGNight.webp" class="img-fluid" alt="in game night">
+                            <img id="Screenshot_IGNight" class="img-fluid" alt="in game night" loading="lazy">
                           </div>
                           <div class="carousel-item" data-bs-interval="3000">
-                            <img src="img/Screenshot_Cutscene.webp" class="img-fluid" alt="cutscene">
+                            <img id="Screenshot_Cutscene" class="img-fluid" alt="cutscene" loading="lazy">
                           </div>
                           <div class="carousel-item" data-bs-interval="3000">
-                            <img src="img/Screenshot_Merchant.webp" class="img-fluid" alt="merchant">
+                            <img id="Screenshot_Merchant" class="img-fluid" alt="merchant" loading="lazy">
                           </div>
                           <div class="carousel-item" data-bs-interval="3000">
-                            <img src="img/Screenshot_Quest.webp" class="img-fluid" alt="quest">
+                            <img id="Screenshot_Quest" class="img-fluid" alt="quest" loading="lazy">
                           </div>
                           <div class="carousel-item" data-bs-interval="3000">
-                            <img src="img/Screenshot_Map.webp" class="img-fluid" alt="map">
+                            <img id="Screenshot_Map" class="img-fluid" alt="map" loading="lazy">
                           </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -242,7 +241,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <script type="module" src="js/emailSubscription.js"></script>
+    <script type="module" src="js/firebase.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animateSpriteSheets.js"></script>
 </body>
@@ -269,8 +268,8 @@
       <section class="footer-text">
         © 2024
         <a href="https://antoinecollot.github.io/" target="_blank">
-          <img src="img/Logo_YorshInGame.webp" 
-            width="100" height="15" priority alt="Logo Yorsh">
+          <img id="Logo_YorshInGame" 
+            width="100" height="15" priority alt="Logo Yorsh" loading="lazy">
         </a>
         All rights reserved
       </section>

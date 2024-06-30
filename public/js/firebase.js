@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBWF-2xrCUXP8y_K00K3JWV8tppzuhJ8Mc",
@@ -12,8 +13,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
+const db = getFirestore(app);
 document
   .getElementById("formEmail")
   .addEventListener("submit", function (event) {
@@ -40,3 +41,25 @@ document
         });
     }
   });
+
+const images = [
+  { id: 'Screenshot_IG', path: 'Screenshot_IG.webp' },
+  { id: 'Screenshot_IGNight', path: 'Screenshot_IGNight.webp' },
+  { id: 'Screenshot_Cutscene', path: 'Screenshot_Cutscene.webp' },
+  { id: 'Screenshot_Merchant', path: 'Screenshot_Merchant.webp' },
+  { id: 'Screenshot_Quest', path: 'Screenshot_Quest.webp' },
+  { id: 'Screenshot_Map', path: 'Screenshot_Map.webp' },
+  { id: 'Logo_YorshInGame', path: 'Logo_YorshInGame.webp' },
+];
+
+const storage = getStorage();
+images.forEach(image => {
+  getDownloadURL(ref(storage, image.path))
+    .then((url) => {
+      const img = document.getElementById(image.id);
+      img.src = url;
+    })
+    .catch((error) => {
+      console.error(`Erreur lors de la récupération de l'image ${image.path} sur firebase storage`, error);
+    });
+});
