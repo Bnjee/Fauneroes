@@ -13,6 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
   updateButtonState();
 });
 
+window.addEventListener('load', function () {
+  setTimeout(_ => {
+    const loader = document.getElementById('loader');
+    loader.style.opacity = '0';
+    setTimeout(_ => {
+        loader.style.display = 'none';
+    }, 200);
+  }, 2000);
+});
+
 /**
  * Permet d'assombrir les textes et les icones des liens quand on passe la souris dessus
  */
