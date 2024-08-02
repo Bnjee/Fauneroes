@@ -71,53 +71,17 @@ function hoverFocus() {
  * Permet de faire un effet de parallax sur plusieurs images
  */
 function setParallaxImages() {
-  classNames = [
-    { className: ".layer-2", ratio: 500 },
-    { className: ".layer-3", ratio: 300 },
-    { className: ".layer-5", ratio: 150 },
-  ];
-  classNames.forEach((layer) => {
-    setParallaxImage(layer.className, layer.ratio);
-  });
-}
+  document.addEventListener('scroll', function(e) {
+    var scrolled = window.pageYOffset;
+    var layer1 = document.querySelector('.layer-1 img');
+    var layer2 = document.querySelector('.layer-2 img');
+    var layer3 = document.querySelector('.layer-3 img');
+    var layer5 = document.querySelector('.layer-5 img');
 
-/**
- * Permet de faire un effet de parallax sur une image
- * @param className
- * @param ratio
- */
-function setParallaxImage(className, ratio) {
-  gsap.fromTo(
-    className,
-    {
-      y: 0,
-    },
-    {
-      y: ratio,
-      ease: "none",
-      scrollTrigger: {
-        trigger: className,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-        invalidateOnRefresh: true,
-      },
-    }
-  );
-}
-
-/**
- * Permet de fixer une image
- * @param className
- */
-function setFixedImage(className) {
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: className,
-      start: "top top",
-      end: "bottom top",
-      pin: true,
-    },
+    layer1.style.transform = 'translateY(' + (scrolled * 1) + 'px)';
+    layer2.style.transform = 'translateY(' + (scrolled * 0.85) + 'px)';
+    layer3.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+    layer5.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
   });
 }
 
@@ -129,7 +93,6 @@ function adaptsHeaderImageAccordingToScreenSize() {
   const screenWidth = window.innerWidth;
   if (screenWidth > 992) {
     setParallaxImages();
-    setFixedImage(".layer-1");
   }
 }
 
