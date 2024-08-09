@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", adaptsHeaderImageAccordingToScreenSize);
   initTextAnimation("#game-title", "The Game");
   initTextAnimation("#demo-title", "Demo is out now!")
+  initTextAnimation("#wishlist-title", "Wishlist the full game")
   initTextAnimation("#game-features", "Features");
   initTextAnimation("#game-faq", "FAQ");
   initTextAnimation("#game-join", "Join our mailing list to be notified when the game is out!");
