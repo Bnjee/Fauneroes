@@ -141,7 +141,7 @@ h1 {
     }
 }
 
-a:not(#contact) {
+a:not(#contact):not(#steam):not(#itchio) {
     font-family: 'signika-bold', sans-serif;
     color: white;
     text-decoration: none;
@@ -272,4 +272,21 @@ footer {
 
 .custom-height-iframe {
     height: 190px;
+}
+
+.word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.char {
+    display: inline-block;
+}
+
+#faq-fauneroes p {
+    margin-left: 20px;
+}
+
+#faq-fauneroes h3 {
+    margin-top: 25px;
 }

@@ -112,7 +112,7 @@ function initTextAnimation(id, newText) {
         if (entry.isIntersecting && title) {
           title.style.visibility = 'visible';
           title.textContent = newText;
-          const text = new SplitType(id, { types: 'chars' })
+          const text = new SplitType(id, { types: 'words, chars' })
           const chars = text.chars
           gsap.fromTo(
             chars,
@@ -124,7 +124,7 @@ function initTextAnimation(id, newText) {
               x: 0,
               opacity: 1,
               duration: 0.5,
-              ease: 'power3.out',
+              ease: 'power3.out'
             });
         } else {
           title.textContent = "-";

@@ -43,12 +43,13 @@ document
   });
 
 const images = [
-  { id: 'Screenshot_IG', path: 'Screenshot_IG.webp' },
-  { id: 'Screenshot_IGNight', path: 'Screenshot_IGNight.webp' },
-  { id: 'Screenshot_Cutscene', path: 'Screenshot_Cutscene.webp' },
-  { id: 'Screenshot_Merchant', path: 'Screenshot_Merchant.webp' },
-  { id: 'Screenshot_Quest', path: 'Screenshot_Quest.webp' },
-  { id: 'Screenshot_Map', path: 'Screenshot_Map.webp' },
+  { id: 'Screenshot_CutsceneEditor', path: 'Screenshot_CutsceneEditor.webp' },
+  { id: 'Screenshot_Forge', path: 'Screenshot_Forge.webp' },
+  { id: 'Screenshot_Gameplay', path: 'Screenshot_Gameplay.webp' },
+  { id: 'Screenshot_Gameplay2', path: 'Screenshot_Gameplay2.webp' },
+  { id: 'Screenshot_Gameplay3', path: 'Screenshot_Gameplay3.webp' },
+  { id: 'Screenshot_GameplayCutscene', path: 'Screenshot_GameplayCutscene.webp' },
+  { id: 'Screenshot_WorldMap2', path: 'Screenshot_WorldMap2.webp' },
   { id: 'Logo_YorshInGame', path: 'Logo_YorshInGame.webp' },
 ];
 
