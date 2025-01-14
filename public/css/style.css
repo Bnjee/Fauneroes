@@ -83,6 +83,14 @@ body {
         width: 170px;
         height: auto;
     }
+
+    p, li {
+       font-size: 16px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
 }
 
 img.logo {
